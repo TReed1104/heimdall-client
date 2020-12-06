@@ -1,27 +1,27 @@
-# heimdall-client
-The local client script for automating the pushing of data to the API. The script records a set of information about the machine and sends it via a POST or PUT web request. The folder contains the script itself and the pip dependencies file.
+# Heimdall Push Client
+The push client for Heimdall is a small python script used for automating the pushing of data to the Heimdall API.
 
-The Data recorded is:
-* The machines hostname
-* The machines MAC Address (Which is also used as the unique ID for the machine in the system)
-* The machines internal IP
-* The machines Operating system
-* The Operating System's version
-* The Operating System's build version
+The script sends the following information about the computer to the API:
+* Hostname
+* MAC Address
+* IP Address
+* Operating system
+* Operating System's version
+* Operating System's build version
 
 <br>
 
 ---
 
 ## Dependencies
-Heimdall uses the pip package manager and is written using Python3.
+The Heimdall client uses the pip package manager and is written using Python3.
 
 The following packages are used in the project:
 
-### Client - Requests - 2.22.0
-Requests is a library used for easily implementing HTTP GET/PUSH/POST/DELETE requests in python. Its through this package that the local client app (local_client.py) pushes data to the Heimdall API.
+### Requests - 2.22.0
+Requests is a library used for easily implementing HTTP CRUD requests in python. Its through this package that the local client app (local_client.py) pushes data to the Heimdall API.
 
-### Client - GetMac - 0.8.2
+### GetMac - 0.8.2
 GetMac is a library used for easily getting the Mac address of a machine Ethernet or Wi-Fi adapter.
 
 <br>
@@ -33,7 +33,9 @@ To allow for the quick and easy deployment of the local client for Heimdall we h
 
 These scripts automatically download and install the different dependencies and libraries required by the client to work.
 
-NOTE: There is a known bug with the Window installation script with Anaconda Python.
+**NOTE: There is a known bug with the Window installation script with Anaconda Python.**
+
+<br>
 
 ### Windows
 To install the local client on Windows 10 based machines please follow the following steps:
@@ -55,6 +57,8 @@ pip install -r requirements.txt
 5. Exit Anaconda Prompt
 6. Run the "install_windows.bat" script by right clicking and selecting "Run as administrator"
 
+<br>
+
 ### Ubuntu
 The client currently supports installation on Ubuntu 16.04 and Ubuntu 18.04.
 
@@ -71,9 +75,7 @@ sudo chmod +x install_ubuntu.sh
 ```
 5. Wait for the script to finish execution
 
-### MacOS
-The client does currently supply a very experimental MacOS install script, this script should be taken as <b>EXPERIMENTAL</b> as users should be careful with its execution.
-
 <br>
 
----
+### MacOS
+The client does currently supply a very experimental MacOS install script, this script should be taken as <b>EXPERIMENTAL</b> as users should be careful with its execution.
