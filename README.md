@@ -79,3 +79,9 @@ sudo chmod +x install_ubuntu.sh
 
 ### MacOS
 The client does currently supply a very experimental MacOS install script, this script should be taken as <b>EXPERIMENTAL</b> as users should be careful with its execution.
+
+
+
+## License
+
+The heimdall client application is open-sourced software licensed under the [MIT](https://choosealicense.com/licenses/mit/) license.
